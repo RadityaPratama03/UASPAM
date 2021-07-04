@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:id="@+id/textView6"
+        android:text="@string/datamakanan"
+        android:layout_gravity="center_horizontal"
+        android:textSize="14pt"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:ems="10"
+        android:textSize="10pt"
+        android:hint="@string/SearchFood"
+        android:inputType="textPersonName"
+        android:background="@color/white"
+        android:drawableRight="@drawable/ic_search" />
+
+
+    <ListView
+        android:id="@+id/listKontak"
+        android:layout_width="match_parent"
+        android:layout_height="467dp"
+        android:layout_marginTop="10dp"
+        android:divider="@color/pink"
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnpesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginStart="330dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginBottom="16dp"
+        android:focusable="true"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</LinearLayout>

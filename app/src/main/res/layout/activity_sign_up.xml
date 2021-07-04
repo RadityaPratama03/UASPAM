@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="12dp"
+    tools:context=".SignUp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:text="@string/judul4"
+                android:textColor="@color/pink"
+                android:textSize="15pt"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/edtNama"
+                    android:layout_width="313dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:hint="@string/eNama"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/edtAlamat"
+                    android:layout_width="313dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:hint="@string/eAlamat"
+                    android:inputType="textLongMessage" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="313dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:hint="@string/eEmail"
+                    android:inputType="textWebEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/pink">
+
+                <EditText
+                    android:id="@+id/edtPass"
+                    android:layout_width="313dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:hint="@string/ePass"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/pink">
+
+                <EditText
+                    android:id="@+id/edtRePass"
+                    android:layout_width="313dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="@string/erepass"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/horizon4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="50dp">
+
+                <Button
+                    android:id="@+id/btBack"
+                    android:layout_width="131dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/batal"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/pink"/>
+
+                <Button
+                    android:id="@+id/btRegis"
+                    android:layout_width="131dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="@string/regis"
+                    app:backgroundTint="@color/pink"/>
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

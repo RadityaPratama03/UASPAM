@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Foddle</string>
+    <string name="judul1">Hai, Selamat Datang</string>
+    <string name="judul2">Silahkan Login</string>
+
+    <!--  Sign in  -->
+    <string name="judul3">Selamat Datang!</string>
+
+    <string name="bSignUp">SIGN UP</string>
+    <string name="bSignIn">SIGN IN</string>
+    <string name="tEmail">Your Email</string>
+    <string name="tPassword">Password</string>
+    <string name="any">or Sign in with</string>
+
+    <!--  Sign up  -->
+    <string name="judul4">Register Your Account</string>
+    <string name="eNama">Name</string>
+    <string name="eEmail">Email</string>
+    <string name="eAlamat">Address</string>
+    <string name="ePass">Password</string>
+    <string name="erepass">Repeat Password</string>
+    <string name="regis">Register</string>
+    <string name="batal">Back</string>
+
+    <!--  Home  -->
+    <string name="datamakanan">Menu Makanan</string>
+    <string name="SearchFood">Search Name</string>
+
+    <!--  Detail Kontak  -->
+    <string name="detailkontak">Detail Menu</string>
+    <string name="nama">Name</string>
+    <string name="price">Price</string>
+    <string name="namaitem">Name Item</string>
+    <string name="lihatdata">View Data</string>
+    <string name="lihatharga">View Price</string>
+</resources>
