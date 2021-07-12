@@ -10,30 +10,30 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SignIn extends AppCompatActivity {
+    //mendeklarasikan
     EditText edEmail, edPassword;
-
     Button btnSignin;
-
     String email, pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-
+        //untuk memanggil layout id
         edEmail = findViewById(R.id.tEmail);
         edPassword = findViewById(R.id.tPassword);
         btnSignin = findViewById(R.id.btnSignin);
-
+        //untuk membuat fungsi
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //untuk mengisi email dan password
                 String mail = "admin@mail.com";
                 String sandi = "123456";
-
+                //untuk memanggil email dan pass
                 email = edEmail.getText().toString();
                 pass = edPassword.getText().toString();
-
+                //memvalidasi data jika benar
                 if(email.equals(mail) && pass.equals(sandi)){
                     Toast done = Toast.makeText(getApplicationContext(), "Sign in Success", Toast.LENGTH_SHORT);
                     done.show();

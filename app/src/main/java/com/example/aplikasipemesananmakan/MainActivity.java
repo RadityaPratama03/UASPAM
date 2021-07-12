@@ -9,18 +9,17 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
+    //untuk mendeklarasikan
     Button bSignin;
     TextView bSignup;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //untuk memanggil layout signin dan signup
         bSignin = findViewById(R.id.bSignin);
         bSignup = findViewById(R.id.bSignup);
-
+        //untuk membuat fungsi bsignin
         bSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        //untuk membuat fungsi bsignup
         bSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

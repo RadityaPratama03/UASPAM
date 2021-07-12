@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUp extends AppCompatActivity{
-
+    //untuk mendeklarasikan
     EditText edtNama, edtAlamat, edtEmail, edtPass, edtRePass;
     Button btBack, btRegis;
     String nama, alamat, email, password, repass;
@@ -19,21 +19,22 @@ public class SignUp extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        //untuk memberi parameter
         Bundle bundle = getIntent().getExtras();
-
+        //untuk memanggil layout id
         edtNama = findViewById(R.id.edtNama);
         edtAlamat = findViewById(R.id.edtAlamat);
         edtEmail = findViewById(R.id.edtEmail);
         edtPass = findViewById(R.id.edtPass);
         edtRePass = findViewById(R.id.edtRePass);
-
+        //untuk memanggil layout id button back dan button registrasi
         btBack = findViewById(R.id.btBack);
         btRegis = findViewById(R.id.btRegis);
-
+        //untuk membuat fungsi
         btBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //untuk menampilkan pesan jika ingin cancel
                 Toast toast = Toast.makeText(getApplicationContext(), "Cencel Sign up...", Toast.LENGTH_LONG);
                 Intent intent = new Intent(SignUp.this, MainActivity.class);
                 toast.show();
@@ -44,6 +45,7 @@ public class SignUp extends AppCompatActivity{
         btRegis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //untuk memvalidasi data
                 if(edtNama.getText().toString().length()==0){
                     edtNama.setError("Name required!");
                 }
@@ -66,7 +68,7 @@ public class SignUp extends AppCompatActivity{
                 else if(edtRePass.getText().toString().length()==0 && edtRePass.equals(edtPass)){
                     edtRePass.setError("Please Repeat the Password!");
                 }
-
+                //jika data benar maka akan menampilkan
                 else if(edtPass.length() != 0 && edtAlamat.length() != 0 && edtEmail.length() != 0 && edtPass.length() !=0 && edtRePass.length() == 6 && edtRePass.getText() == edtRePass.getText()){
                     Toast.makeText(getApplicationContext(), "Registrasi Success!",
                             Toast.LENGTH_SHORT).show();

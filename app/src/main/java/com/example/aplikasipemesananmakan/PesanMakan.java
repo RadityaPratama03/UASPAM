@@ -13,13 +13,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.NumberFormat;
 
 public class PesanMakan extends AppCompatActivity {
+    //mendeklarasikan
     int quantity=0;
+    //untuk membuat fungsi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesan_makan);
     }
-    public void increment(View view){//perintah tombol tambah
+    public void increment(View view){
+        //perintah tombol tambah
         if(quantity==100){
             Toast.makeText(this,"pesanan maximal 50",Toast.LENGTH_SHORT).show();
             return;
@@ -27,7 +30,8 @@ public class PesanMakan extends AppCompatActivity {
         quantity = quantity+1 ;
         display(quantity);
     }
-    public void decrement(View view){//perintah tombol kurang
+    public void decrement(View view){
+        //perintah tombol kurang
         if (quantity==1){
             Toast.makeText(this,"pesanan minimal 1",Toast.LENGTH_SHORT).show();
             return;
@@ -41,41 +45,42 @@ public class PesanMakan extends AppCompatActivity {
         EditText nameEditText=(EditText)findViewById(R.id.edt_name);
         String name=nameEditText.getText().toString();
         Log.v("MainActivity","Nama:"+name);
-
+        //mengidentifikasi check
         CheckBox nasigorengChekBox= (CheckBox) findViewById(R.id.nasigoreng_checkbox);
-        boolean hasnasigoreng=nasigorengChekBox.isChecked();//mengidentifikasi check
+        boolean hasnasigoreng=nasigorengChekBox.isChecked();
         Log.v("MainActivity","has nasigoreng:"+hasnasigoreng);
-
+        //mengidentifikasi check
         CheckBox miegorengChekBox= (CheckBox) findViewById(R.id.miegoreng_checkbox);
-        boolean hasmiegoreng=miegorengChekBox.isChecked();//mengidentifikasi check
+        boolean hasmiegoreng=miegorengChekBox.isChecked();
         Log.v("MainActivity","has miegoreng:"+hasmiegoreng);
-
+        //mengidentifikasi check
         CheckBox pecelChekBox= (CheckBox) findViewById(R.id.pecel_checkbox);
-        boolean haspecel=pecelChekBox.isChecked();//mengidentifikasi check
+        boolean haspecel=pecelChekBox.isChecked();
         Log.v("MainActivity","has pecel:"+haspecel);
-
+        //mengidentifikasi check
         CheckBox estehChekBox= (CheckBox) findViewById(R.id.esteh_checkbox);
-        boolean hasesteh=estehChekBox.isChecked();//mengidentifikasi check
+        boolean hasesteh=estehChekBox.isChecked();
         Log.v("MainActivity","has esteh:"+hasesteh);
-
+        //mengidentifikasi check
         CheckBox esjerukChekBox= (CheckBox) findViewById(R.id.esjeruk_checkbox);
-        boolean hasesjeruk=esjerukChekBox.isChecked();//mengidentifikasi check
+        boolean hasesjeruk=esjerukChekBox.isChecked();
         Log.v("MainActivity","has esjeruk:"+hasesjeruk);
-
+        //mengidentifikasi check
         CheckBox kopiChekBox= (CheckBox) findViewById(R.id.kopi_checkbox);
-        boolean haskopi=kopiChekBox.isChecked();//mengidentifikasi check
+        boolean haskopi=kopiChekBox.isChecked();
         Log.v("MainActivity","has kopi:"+haskopi);
-
+        //
         int price=calculateprice(hasnasigoreng,hasmiegoreng,haspecel,hasesteh,hasesjeruk,haskopi);
         String pricemessage=createOrderSummary(price,name,hasnasigoreng, hasmiegoreng, haspecel,hasesteh,hasesjeruk,haskopi);
 
-
+        //untuk menampilkan pesan atau message
         displayMessage(pricemessage);
 
     }
     private int calculateprice(boolean addnasigoreng,boolean addmiegoreng, boolean addpecel, boolean addesteh,
                                boolean addesjeruk, boolean addkopi)
     {
+        //untuk perhitungan data dengan harga
         int harga= 0;
 
         if(addnasigoreng){
@@ -100,6 +105,7 @@ public class PesanMakan extends AppCompatActivity {
     }
     private String createOrderSummary(int price, String name, boolean addnasigoreng, boolean addmiegoreng,
                                       boolean addpecel,boolean addesteh,boolean addesjeruk,boolean addkopi) {//hasil pemesanan
+        //untuk memasukkan atau menampilkan makanan, harga dan total
         String pricemessage=" Nama = "+name;
         pricemessage+="\n Tambahkan Nasi Goreng =" +addnasigoreng;
         pricemessage+="\n Tambahkan Mie Goreng =" +addmiegoreng;
@@ -112,15 +118,17 @@ public class PesanMakan extends AppCompatActivity {
         pricemessage+="\n Selamat Menikmati :)";
         return  pricemessage;
     }
-
+    //untuk menampilkan harga
     private void displayMessage(String message) {
         TextView priceTextView = (TextView) findViewById(R.id.price_textview);
         priceTextView.setText(message);
     }
+    //untuk menampilkan jumlah
     private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_textview);
         quantityTextView.setText("" + number);
     }
+    //untuk menampilkan total
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_textview);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));

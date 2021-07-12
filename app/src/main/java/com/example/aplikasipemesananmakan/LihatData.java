@@ -6,17 +6,20 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LihatData extends AppCompatActivity {
+    //menginisialisasikan
     TextView tvnama, tvprice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_data);
+        //memberi parameter
         Bundle bundle = getIntent().getExtras();
         String nama = bundle.getString("a");
-
+        //memanggil layout id
         tvnama = findViewById(R.id.tvNamaKontak);
         tvprice = findViewById(R.id.tvNomorTelepon);
         switch (nama){
+            //untuk menampilkan layout data makan
             case "Nasi Goreng":
                 tvnama.setText("Nasi Goreng");
                 tvprice.setText("Rp. 10.000");
